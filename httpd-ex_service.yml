@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftWebConsole
+  creationTimestamp: 2020-11-10T02:07:50Z
+  labels:
+    app: httpd-ex
+  name: httpd-ex
+  namespace: sign
+  resourceVersion: "649197"
+  selfLink: /api/v1/namespaces/sign/services/httpd-ex
+  uid: 8942e1f7-22f9-11eb-9cc2-0800279a4b20
+spec:
+  clusterIP: 172.30.230.21
+  ports:
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deploymentconfig: httpd-ex
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
